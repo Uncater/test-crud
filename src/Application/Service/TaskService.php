@@ -1,13 +1,13 @@
 <?php
 
 
-namespace App\Service;
+namespace App\Application\Service;
 
 
-use App\DTO\TaskAssembler;
-use App\DTO\TaskDTO;
-use App\Entity\Task;
-use App\Repository\TaskRepositoryInterface;
+use App\Application\DTO\TaskAssembler;
+use App\Application\DTO\TaskDTO;
+use App\Domain\Entity\Task\Task;
+use App\Domain\Entity\Task\TaskRepositoryInterface;
 use Doctrine\ORM\EntityNotFoundException;
 
 class TaskService

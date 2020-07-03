@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Repository;
+namespace App\Infrastructure\Repository;
 
-use App\Entity\Task;
+use App\Domain\Entity\Task\Task;
+use App\Domain\Entity\Task\TaskRepositoryInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
 class TaskRepository implements TaskRepositoryInterface

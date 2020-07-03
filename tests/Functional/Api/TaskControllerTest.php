@@ -83,4 +83,25 @@ class TaskControllerTest extends WebTestCase
         $client->request('DELETE', "/api/task/{$id}");
         $this->assertEquals(204, $client->getResponse()->getStatusCode());
     }
+
+    public function testGetNonExistingTaskShouldTriggerException()
+    {
+        $client = static::createClient();
+        $client->request('GET', "/api/tasks");
+        $data = json_decode($client->getResponse()->getContent(), true);
+        $existingIds = array_map(function ($item) {
+            return $item['id'];
+        }, $data);
+        $nonExistingId = $this->getRandomId($existingIds);
+        $client->request('GET', "/api/task/{$nonExistingId}");
+        $this->assertEquals(404, $client->getResponse()->getStatusCode());
+    }
+
+    protected function getRandomId(array $except = [])
+    {
+        do {
+            $id = mt_rand(1, 10000);
+        } while (in_array($id, $except));
+        return $id;
+    }
 }

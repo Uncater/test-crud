@@ -1,10 +1,9 @@
 <?php
 
 
-namespace App\DTO;
+namespace App\Application\DTO;
 
-
-use App\Entity\Task;
+use App\Domain\Entity\Task\Task;
 
 class TaskAssembler
 {

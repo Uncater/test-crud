@@ -1,10 +1,7 @@
 <?php
 
 
-namespace App\Repository;
-
-
-use App\Entity\Task;
+namespace App\Domain\Entity\Task;
 
 interface TaskRepositoryInterface
 {

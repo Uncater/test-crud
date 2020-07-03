@@ -3,6 +3,6 @@ kernel:
     type: annotation
 
 rest_controller:
-    resource: ../../src//Controller/Api/
+    resource: ../../src/Infrastructure/Http/Api/Controller/
     type: annotation
     prefix: /api

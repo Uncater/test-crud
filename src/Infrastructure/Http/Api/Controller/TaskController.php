@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller\Api;
+namespace App\Infrastructure\Http\Api\Controller;
 
-use App\DTO\TaskDTO;
-use App\Entity\Task;
-use App\Service\TaskService;
+use App\Application\DTO\TaskDTO;
+use App\Domain\Entity\Task\Task;
+use App\Application\Service\TaskService;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\View\View;
